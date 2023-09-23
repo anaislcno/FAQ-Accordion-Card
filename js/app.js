@@ -28,14 +28,16 @@ var i;
 
 for (i = 0; i < accordion.length; i++) {
   accordion[i].addEventListener("click", function () {
-    closeOldQuestionsActive();
-    openAnswer(this);
+    if (this.classList.contains("active") == false) {
+      closeOldQuestionsActive();
+    }
+    openAndCloseAnswer(this);
   });
 }
 
 // Active question collapse
 
-function openAnswer(currentQuestion) {
+function openAndCloseAnswer(currentQuestion) {
   var answer = currentQuestion.nextElementSibling;
 
   currentQuestion.classList.toggle("active");

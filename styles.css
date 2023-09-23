@@ -44,9 +44,14 @@ main {
   position: relative;
 }
 
+#illustration__container--mobile {
+  display: none;
+}
+
 #overflow {
   overflow: hidden;
   max-width: 500px;
+  max-height: 600px;
 }
 
 .desk__cube {
@@ -96,6 +101,7 @@ hr {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .question:hover {
@@ -139,4 +145,63 @@ hr {
 
 .attribution a {
   color: rgb(62, 82, 163);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  main {
+    padding-top: 200px;
+    height: 100%;
+  }
+
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 350px;
+  }
+
+  #illustration__container {
+    display: none;
+  }
+
+  #illustration__container--mobile {
+    display: flex;
+    width: 275px;
+    height: 275px;
+    position: absolute;
+    top: 6%;
+    left: calc(50% - 137px);
+  }
+
+  .mobile__woman {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .mobile__shadow {
+    /* display: none; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    right: 100%;
+    top: 30%;
+  }
+
+  #faq__section {
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 160px 30px 40px 30px;
+  }
+
+  .question {
+    font-size: 14px;
+  }
+
+  #faq__container {
+    width: 100%;
+  }
 }
