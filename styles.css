@@ -40,14 +40,18 @@ main {
 /* Illustration */
 
 #illustration__container {
-  overflow: hidden;
   max-height: 580px;
   position: relative;
 }
 
+#overflow {
+  overflow: hidden;
+  max-width: 500px;
+}
+
 .desk__cube {
   position: absolute;
-  top: 45%;
+  top: 38%;
   left: -17%;
   z-index: 100;
 }
@@ -61,8 +65,8 @@ main {
 
 .desk__shadow {
   position: relative;
-  bottom: 639px;
-  right: 554px;
+  bottom: 650px;
+  right: 550px;
 }
 
 /* FAQ section */
@@ -82,11 +86,10 @@ h1 {
 .question {
   color: rgb(74, 75, 94);
   font-weight: 500;
-  font-size: 14px;
-}
-
-.question:target {
-  color: rgb(29, 30, 53);
+  font-size: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .question:hover {
@@ -96,6 +99,28 @@ h1 {
 
 .answer {
   color: rgb(120, 120, 135);
+  display: none;
+  overflow: hidden;
+}
+
+/* Toggle */
+
+.active {
+  color: rgb(29, 30, 53);
+  font-weight: 700;
+}
+
+.question:after {
+  content: url(./images/icon-arrow-down.svg);
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: url(./images/icon-arrow-down.svg);
+  rotate: 180deg;
 }
 
 /* Attribution */

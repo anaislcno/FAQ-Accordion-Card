@@ -29,14 +29,32 @@ faqData.forEach((element) => {
 
   // Create a new question element
   const questionElement = document.createElement("div");
-  //   questionElement.className = "category";
 
   // Create content
   questionElement.innerHTML = `
         <h2 class="question">${question}</h2>
         <p class="answer">${answer}</p>
+        <hr />
     `;
 
   // Append the category element to the document
   document.getElementById("faq__container").appendChild(questionElement);
 });
+
+// Accordion
+
+var accordion = document.getElementsByClassName("question");
+var i;
+
+for (i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+
+    var answer = this.nextElementSibling;
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    } else {
+      answer.style.display = "block";
+    }
+  });
+}
