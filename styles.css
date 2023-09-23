@@ -72,15 +72,21 @@ main {
 /* FAQ section */
 
 #faq__section {
-  padding: 20px 100px 20px 10px;
+  padding: 70px 100px 20px 10px;
   display: flex;
+  max-height: 500px;
   flex-direction: column;
-  justify-content: center;
 }
 
 h1 {
   font-size: 40px;
   font-weight: 700;
+  margin-bottom: 40px;
+}
+
+hr {
+  color: rgb(120, 120, 135);
+  margin: 20px 0px;
 }
 
 .question {
