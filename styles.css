@@ -24,6 +24,7 @@ main {
   flex-direction: column;
   height: 100vh;
   gap: 2rem;
+  padding: 0 40px;
 }
 
 #container {
@@ -203,5 +204,15 @@ hr {
 
   #faq__container {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 968px) {
+  #faq__section {
+    padding: 70px 40px 20px 0px;
+  }
+
+  #overflow {
+    max-width: 450px;
   }
 }
